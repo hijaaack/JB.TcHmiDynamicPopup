@@ -17,7 +17,7 @@ Nuget package created for version 1.12.760.42
 
 In version 1.12.760.x a new TcHmiPopup control was added to TwinCAT HMI.
 
-So instead of having to add the Popup manually to the view/content this nuget package is dynamically creating a usercontrol/content by calling a javascript function and it will have the same look & feel as the new TcHmiPopup.
+Instead of having to add the Popup manually to the view/content this nuget package is dynamically creating a usercontrol/content by calling a javascript function and it will have the same look & feel as the new TcHmiPopup that you can find in the toolbox.
 
 ## Usage
 
