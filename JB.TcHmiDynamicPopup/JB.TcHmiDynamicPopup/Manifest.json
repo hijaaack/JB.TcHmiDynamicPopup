@@ -1,0 +1,18 @@
+{
+  "modules": [
+    {
+      "type": "Package",
+      "nugetId": "Beckhoff.TwinCAT.HMI.Framework"
+    },
+    {
+      "type": "Function",
+      "basePath": "./",
+      "descriptionFile": "CreatePopup.function.json"
+    }
+  ],
+  "provideMetadata": {
+    "toolbox": {}
+  },
+  "$schema": ".hmiframework/Schema/Manifest.Schema.json",
+  "apiVersion": 1
+}

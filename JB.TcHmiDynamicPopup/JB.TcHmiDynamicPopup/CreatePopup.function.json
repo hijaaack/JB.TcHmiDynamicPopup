@@ -1,0 +1,151 @@
+{
+  "$schema": "../.hmiframework/Schema/FunctionDescription.Schema.json",
+  "apiVersion": 1,
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "dependencyFiles": [
+    {
+      "name": "CreatePopup.js",
+      "type": "JavaScript",
+      "description": ""
+    }
+  ],
+  "function": {
+    "name": "CreatePopup",
+    "namespace": "TcHmi.Functions.JB_TcHmiDynamicPopup",
+    "displayName": "CreatePopup",
+    "description": "",
+    "waitMode": "Synchronous",
+    "category": "DynamicPopup",
+    "returnValue": {
+      "type": "tchmi:general#/definitions/String"
+    },
+    "arguments": [
+        {
+            "name": "popupId",
+            "displayName": "popupId",
+            "type": "tchmi:general#/definitions/String",
+            "description": "Needed so we dont create duplicates",
+            "defaultValue": null,
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "targetFile",
+            "displayName": "targetFile",
+            "type": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.TargetFile",
+            "description": "",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "popupHeader",
+            "displayName": "popupHeader",
+            "type": "tchmi:general#/definitions/String",
+            "description": "Header text of the popup",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "modal",
+            "displayName": "modal",
+            "type": "tchmi:general#/definitions/Boolean",
+            "description": "",
+            "defaultValue": "True",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "movable",
+            "displayName": "movable",
+            "type": "tchmi:general#/definitions/Boolean",
+            "description": "",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "destination",
+            "displayName": "destination",
+            "type": "tchmi:framework#/definitions/Id",
+            "description": "",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "width",
+            "displayName": "width",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "Width in px",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "height",
+            "displayName": "height",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "Height in px",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "left",
+            "displayName": "left",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "Left position in px",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
+            "name": "top",
+            "displayName": "top",
+            "type": "tchmi:general#/definitions/Number",
+            "description": "Top position in px",
+            "defaultValue": "",
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        }
+    ]
+  }
+}
