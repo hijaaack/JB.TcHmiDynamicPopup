@@ -6,7 +6,7 @@
     (function (/** @type {globalThis.TcHmi.Functions} */ Functions) {
         var JB_TcHmiDynamicPopup;
         (function (JB_TcHmiDynamicPopup) {
-            function CreatePopup(popupId, targetFile, popupHeader, modal, movable, destination, width, height, left, top) {
+            function CreatePopup(popupId, targetFile, popupHeader, buttons, modal, movable, destination, width, height, left, top) {
 
                 var id = "";
 
@@ -44,7 +44,8 @@
                                 "data-tchmi-width-unit": "%",
                                 "data-tchmi-height-unit": "%"
                             };
-                            //Create UserControl
+
+                            //Create Content
                             popupHost = TcHmi.ControlFactory.createEx(
                                 "TcHmi.Controls.System.TcHmiRegion",
                                 id,
@@ -80,9 +81,28 @@
 
                         }
 
+                        //Create buttons
+                        const buttonsObject = {};
+                        for (const button of buttons) buttonsObject[button.name] = {
+                            value: "value" in button ? button.value : null,
+                            width: button.width,
+                            height: button.height,
+                            widthMode: button.widthMode,
+                            heightMode: button.heightMode,
+                            minWidth: button.minWidth,
+                            maxWidth: button.maxWidth,
+                            minHeight: button.minHeight,
+                            maxHeight: button.maxHeight,
+                            textPadding: button.textPadding,
+                            text: button.text,
+                            tooltip: button.tooltip,
+                            keepPopupOpen: button.keepPopupOpen,
+                            actions: button.actions
+                        };
+
                         const popupElement = popupHost.getElement()[0]; //retrieve html-element
                         const popupDestination = TcHmi.Controls.get(destination); //get destination control
-                        const popup = popupUiProvider.createHtmlElementBox(popupHeader, popupElement, {}, popupDestination);
+                        const popup = popupUiProvider.createHtmlElementBox(popupHeader, popupElement, buttonsObject, popupDestination);
 
                         if (modal) {
                             popup.setBackgroundMode(TcHmi.UiProvider.PopupProvider.BackgroundMode.Dimmed);

@@ -63,6 +63,18 @@
             "allowControlAttributeBindingOptions": false
         },
         {
+            "name": "buttons",
+            "displayName": "buttons",
+            "type": "tchmi:framework#/definitions/TcHmi.Controls.System.TcHmiPopup.ButtonList",
+            "description": "Additional buttons",
+            "defaultValue": null,
+            "required": true,
+            "bindable": true,
+            "restParameter": false,
+            "asReference": false,
+            "allowControlAttributeBindingOptions": false
+        },
+        {
             "name": "modal",
             "displayName": "modal",
             "type": "tchmi:general#/definitions/Boolean",

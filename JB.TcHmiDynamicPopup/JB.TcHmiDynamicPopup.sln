@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33529.622
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{3B740506-4966-4147-AB1F-357FE08946EA}") = "JB.TcHmiDynamicPopup", "JB.TcHmiDynamicPopup\JB.TcHmiDynamicPopup.hmiextproj", "{EC76D9BF-7C14-40EF-841E-6FD8F874DB98}"
 EndProject
