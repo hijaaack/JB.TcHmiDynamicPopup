@@ -13,7 +13,7 @@ always subject to change, revision, and rethinking at any time. Please do not ho
 in perpetuity.
 
 ## JB.TcHmiDynamicPopup for TwinCAT HMI
-Nuget package created for version 1.12.760.42
+Nuget package created for version 1.14.3.8
 
 In version 1.12.760.x a new TcHmiPopup control was added to TwinCAT HMI.
 
@@ -31,6 +31,7 @@ Parameters in the function:
  - **popupId:** unique id for the popup (this is used so you dont accidentally open the same popup with the same data-bindings twice)
  - **targetFile:** choose .usercontrol or .content and also link the parameters if it's an .usercontrol file
  - **popupHeader:** header text for the popup
+ - **buttons:** additional buttons (such as close-button or other custom ones)
  - **modal:** this will center the popup in the screen and add a darkened background, also not movable
  - **movable:** make the popup draggable
  - **destination:** where the popup should be added. If you are using the Desktop.view just type Desktop
