@@ -19,7 +19,7 @@
     <ProjectName>JB_TcHmiDynamicPopup</ProjectName>
     <Name>JB.TcHmiDynamicPopup</Name>
     <HmiInitial>1.12.760.42</HmiInitial>
-    <HmiRecent>14.3.221.1</HmiRecent>
+    <HmiRecent>14.3.379.1</HmiRecent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|TwinCAT HMI' ">
     <PlatformTarget>TwinCAT HMI</PlatformTarget>

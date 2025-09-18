@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>JB.TcHmiDynamicPopup</id>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <description>Dynamic Popup creation with a function call.</description>
     <authors>Jack Borelius</authors>
     <title>JB.TcHmiDynamicPopup</title>
     <owners>Jack Borelius</owners>
     <projectUrl>https://github.com/hijaaack/JB.TcHmiDynamicPopup</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Updated to add new features that was introduced with HMI version 14.x.</releaseNotes>
+    <releaseNotes>Fixed issue when not using the extra buttons</releaseNotes>
     <copyright>Copyright 2025</copyright>
     <tags>TwinCAT HMI ProductVersion_14.3</tags>
     <license type="file">LICENSE.txt</license>

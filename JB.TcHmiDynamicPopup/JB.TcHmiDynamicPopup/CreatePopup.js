@@ -81,24 +81,26 @@
 
                         }
 
-                        //Create buttons
+                        //Create buttons if the exists
                         const buttonsObject = {};
-                        for (const button of buttons) buttonsObject[button.name] = {
-                            value: "value" in button ? button.value : null,
-                            width: button.width,
-                            height: button.height,
-                            widthMode: button.widthMode,
-                            heightMode: button.heightMode,
-                            minWidth: button.minWidth,
-                            maxWidth: button.maxWidth,
-                            minHeight: button.minHeight,
-                            maxHeight: button.maxHeight,
-                            textPadding: button.textPadding,
-                            text: button.text,
-                            tooltip: button.tooltip,
-                            keepPopupOpen: button.keepPopupOpen,
-                            actions: button.actions
-                        };
+                        if (buttons !== null) {
+                            for (const button of buttons) buttonsObject[button.name] = {
+                                value: "value" in button ? button.value : null,
+                                width: button.width,
+                                height: button.height,
+                                widthMode: button.widthMode,
+                                heightMode: button.heightMode,
+                                minWidth: button.minWidth,
+                                maxWidth: button.maxWidth,
+                                minHeight: button.minHeight,
+                                maxHeight: button.maxHeight,
+                                textPadding: button.textPadding,
+                                text: button.text,
+                                tooltip: button.tooltip,
+                                keepPopupOpen: button.keepPopupOpen,
+                                actions: button.actions
+                            };
+                        }
 
                         const popupElement = popupHost.getElement()[0]; //retrieve html-element
                         const popupDestination = TcHmi.Controls.get(destination); //get destination control
@@ -126,7 +128,6 @@
 
                         TcHmi.EventProvider.register(id + ".onDetached", (e, data) => {
                             popup.destroy();
-                            popupHost.destroy();
                             e.destroy();
                         });
 
