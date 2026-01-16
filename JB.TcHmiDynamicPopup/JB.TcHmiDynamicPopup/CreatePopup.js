@@ -129,6 +129,7 @@
                         TcHmi.EventProvider.register(id + ".onDetached", (e, data) => {
                             popup.destroy();
                             e.destroy();
+                            popupHost.destroy();
                         });
 
                     } catch (e) {
