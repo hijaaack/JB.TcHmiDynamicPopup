@@ -2,27 +2,35 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>JB.TcHmiDynamicPopup</id>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
     <description>Dynamic Popup creation with a function call.</description>
     <authors>Jack Borelius</authors>
     <title>JB.TcHmiDynamicPopup</title>
     <owners>Jack Borelius</owners>
     <projectUrl>https://github.com/hijaaack/JB.TcHmiDynamicPopup</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>Fixed issue when not using the extra buttons</releaseNotes>
-    <copyright>Copyright 2025</copyright>
+    <releaseNotes>Fixed issue with popup not getting removed correctly after close</releaseNotes>
+    <copyright>Copyright 2026</copyright>
     <tags>TwinCAT HMI ProductVersion_14.3</tags>
     <license type="file">LICENSE.txt</license>
     <icon>images/logo.png</icon>
     <dependencies>
       <group targetFramework="native1.12-tchmi">
-        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="14.3.133" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Functions" version="14.3.344" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Controls" version="14.4.32" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Framework" version="14.3.431" />
+        <dependency id="Beckhoff.TwinCAT.HMI.Server.Engineering" version="22.0.7765" />
       </group>
     </dependencies>
   </metadata>
   <files>
-    <file src="LICENSE.txt" target="" />
-    <file src="**\*" target="runtimes\native1.12-tchmi\" exclude=".eslintrc.json;**\*.nuspec;**\*.tpl.json;**\*.hmi*proj;**\~*;**\*.tmp;**\tmp*;**\*.user;**\tsconfig.json;**\*.log;**\*.bak;**\obj\**\*;**\.hmiframework\*;**\.hmiframework\**\*;**\.hmipkgs\**\*;packages.config;packages.xsd;.hmiframework\**\*;.git;.gitignore;.gitattributes" />
-    <file src="images\logo.png" target="images\" />
+    <file src="LICENSE.txt" target="" exclude="bin\**" />
+    <file src="LICENSE.txt" target="runtimes\native1.12-tchmi\" exclude="bin\**" />
+    <file src="README.md" target="" exclude="bin\**" />
+    <file src="README.md" target="runtimes\native1.12-tchmi\" exclude="bin\**" />
+    <file src="images\logo.png" target="images\" exclude="bin\**" />
+    <file src="Manifest.json" target="runtimes\native1.12-tchmi\" exclude="bin\**" />
+    <file src="**/*.function.json" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**;bin\**" />
+    <file src="**/*.js" target="runtimes\native1.12-tchmi\" exclude=".hmipkgs\**;.hmiframework\**;bin\**" />
   </files>
 </package>

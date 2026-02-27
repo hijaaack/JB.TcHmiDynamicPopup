@@ -1,5 +1,5 @@
 // Keep these lines for a best effort IntelliSense of Visual Studio 2017 and higher.
-/// <reference path="./../Packages/Beckhoff.TwinCAT.HMI.Framework.12.760.42/runtimes/native1.12-tchmi/TcHmi.d.ts" />
+/// <reference path="./../Packages/Beckhoff.TwinCAT.HMI.Framework.14.3.360/runtimes/native1.12-tchmi/TcHmi.d.ts" />
 
 (function (/** @type {globalThis.TcHmi} */ TcHmi) {
     var Functions;
@@ -129,6 +129,7 @@
                         TcHmi.EventProvider.register(id + ".onDetached", (e, data) => {
                             popup.destroy();
                             e.destroy();
+                            popupHost.destroy();
                         });
 
                     } catch (e) {
